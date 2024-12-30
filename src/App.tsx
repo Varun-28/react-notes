@@ -1,6 +1,6 @@
 import './App.css';
-import { StateHook } from './components/Components';
-import { useTheme } from "./context/themeContext/theme-context";
+import { StateHook } from './pages/stateHook/StateHook';
+import { useTheme } from "./pages/contextHook/themeContext/theme-context";
 
 function App() {
   const { theme, darkLight } = useTheme();

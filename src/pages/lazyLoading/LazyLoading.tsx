@@ -4,7 +4,7 @@ import { Suspense, lazy } from 'react';
 // Define a component that will be lazily loaded
 
 const LazyComponent = lazy(() =>
-    import('./StateHook').then((module) => ({ default: module.StateHook })) // Map named export to default
+    import('../stateHook/StateHook').then((module) => ({ default: module.StateHook })) // Map named export to default
 );
 
 /* 
