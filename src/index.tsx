@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "./pages/contextHook/themeContext/theme-context";
 import { CartProvider } from "./pages/contextHook/cartContext/cart-context";
+import { CounterProvider } from "./pages/reducerHook/counterContext/counter-context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
     <ThemeProvider>
       <CartProvider>
-        <App />
+        <CounterProvider>
+          <App />
+        </CounterProvider>
       </CartProvider>
     </ThemeProvider>
   </React.StrictMode>
