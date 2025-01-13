@@ -10,12 +10,17 @@ const CountdownTimer = () => {
 
     if (isRunning) {
       intervalId = setInterval(() => {
+        if(time>0){
         setTime((prevTime) => prevTime - 1);
+        }else{
+          setTime(0);
+          clearInterval(intervalId);
+        }
       }, 1000);
     }
 
     return () => clearInterval(intervalId);
-  }, [isRunning]);
+  }, [isRunning,time]);
 
   const startTimer = () => {
     if (time > 0) {
